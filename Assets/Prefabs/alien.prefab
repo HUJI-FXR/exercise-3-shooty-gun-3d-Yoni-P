@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5741457041463874330}
   - component: {fileID: 2655852990317455223}
   - component: {fileID: 1012634358664060173}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_right_hand03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1723136537131435578}
   - component: {fileID: 5656598545632244198}
   - component: {fileID: 2065616626440280153}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_left_foot03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 3633031890931587976}
   - component: {fileID: 8274467295645034831}
   - component: {fileID: 4357766768269279509}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_left_hand02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 5756808949935508767}
   - component: {fileID: 3293769851823451434}
   - component: {fileID: 5189245244796686820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_right_foot01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 4605876332829088231}
   - component: {fileID: 1813279623055320259}
   - component: {fileID: 2829407551203463427}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_left_foot02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 6419942909200083760}
   - component: {fileID: 8985696448564315937}
   - component: {fileID: 6082892962903856765}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: alien_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,9 +507,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 329988148292318248}
-  m_Layer: 0
+  - component: {fileID: 7603870343119151795}
+  - component: {fileID: 7408402122340312791}
+  - component: {fileID: 2869405394648941466}
+  - component: {fileID: 662647525611904966}
+  m_Layer: 9
   m_Name: alien
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -544,6 +548,89 @@ Transform:
   - {fileID: 1066317823696410632}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &7603870343119151795
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136796078738541680}
+  serializedVersion: 4
+  m_Mass: 4
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!136 &7408402122340312791
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136796078738541680}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.38608646
+  m_Height: 1.8041999
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.8753433, z: -0.113913536}
+--- !u!114 &2869405394648941466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136796078738541680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b9005ac0fb22d4882b5c1922285077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 10
+  speed: 10
+  jumpForce: 20
+--- !u!114 &662647525611904966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136796078738541680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fdc9616d1c38d24296b59a67ec0acec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementScript: {fileID: 2869405394648941466}
+  monsterTime: 2
+  chasePlayerChance: 0.25
+  rotateToPlayerSpeed: 10
+  minRandomRotation: -20
+  maxRandomRotation: 20
 --- !u!1 &3752068322953223342
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +642,7 @@ GameObject:
   - component: {fileID: 2936499276464834963}
   - component: {fileID: 316637201067589077}
   - component: {fileID: 8680381648446688210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left_eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +725,7 @@ GameObject:
   - component: {fileID: 3499115661515843130}
   - component: {fileID: 4137094496443543675}
   - component: {fileID: 4332898146386162656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_right_foot03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +808,7 @@ GameObject:
   - component: {fileID: 1365635302600065823}
   - component: {fileID: 8927418386911600900}
   - component: {fileID: 4495790986259551229}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_right_hand01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +891,7 @@ GameObject:
   - component: {fileID: 2529121932994636250}
   - component: {fileID: 5355296845397350008}
   - component: {fileID: 1308842513036922738}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_right_hand02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +974,7 @@ GameObject:
   - component: {fileID: 7969593028164121485}
   - component: {fileID: 3811077095947429343}
   - component: {fileID: 6979945767632405180}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_left_hand03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,7 +1057,7 @@ GameObject:
   - component: {fileID: 6431883585474044074}
   - component: {fileID: 7496837230113597767}
   - component: {fileID: 7779584949701743471}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_left_hand01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,7 +1140,7 @@ GameObject:
   - component: {fileID: 159409450657400158}
   - component: {fileID: 4068632171276889038}
   - component: {fileID: 727846633760820224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_right_foot02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1223,7 @@ GameObject:
   - component: {fileID: 1066317823696410632}
   - component: {fileID: 6714163740497522947}
   - component: {fileID: 2349469385003558454}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right_eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1219,7 +1306,7 @@ GameObject:
   - component: {fileID: 1411208892092326969}
   - component: {fileID: 8680330719311406624}
   - component: {fileID: 4514107126790592386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: nail_left_foot01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
