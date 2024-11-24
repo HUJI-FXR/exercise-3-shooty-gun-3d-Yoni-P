@@ -27,9 +27,6 @@ public class MovementScript : MonoBehaviour
 
         _rigidbody.velocity = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0) * Vector3.forward * curSpeed 
             + new Vector3(0, _rigidbody.velocity.y, 0);
-        
-        if (gameObject.CompareTag("Enemy"))
-            Debug.Log("Input: " + curInput.axisInput + ", Vel: " +_rigidbody.velocity);
 
         if (curInput.isJumpPressed && _isGrounded)
             Jump();

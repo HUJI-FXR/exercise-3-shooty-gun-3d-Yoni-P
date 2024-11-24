@@ -59,13 +59,15 @@ public class MonsterControlScript : MonoBehaviour
         var rot = 0f;
         if (_chasePlayer)
         {
-            var playerPos = new Vector3(_playerTransform.position.x, 0f, _playerTransform.position.z);
-            var monsterPos = new Vector3(transform.position.x, 0f, transform.position.z);
-            var angleDiff = Vector3.SignedAngle(monsterPos, playerPos, Vector3.up);
+            var dirToPlayer = _playerTransform.position - transform.position;
+            dirToPlayer.y = 0;
+            var monsterDir = new Vector3(transform.forward.x, 0f, transform.forward.z);
+            var angleDiff = Vector3.SignedAngle(dirToPlayer, monsterDir, Vector3.up);
 
-            rot = rotateToPlayerSpeed * Mathf.Sign(angleDiff) * Time.deltaTime;
+            rot = Mathf.Abs(angleDiff) > 0.5f ? rotateToPlayerSpeed * -Mathf.Sign(angleDiff) * Time.deltaTime : 0f;
+            
+            Debug.Log("Angle diff: " + angleDiff + ", rot: " + rot);
         }
-
         else
         {
             rot = Random.Range(minRandomRotation, maxRandomRotation);

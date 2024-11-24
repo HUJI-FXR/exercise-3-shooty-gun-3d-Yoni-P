@@ -511,6 +511,9 @@ GameObject:
   - component: {fileID: 7408402122340312791}
   - component: {fileID: 2869405394648941466}
   - component: {fileID: 662647525611904966}
+  - component: {fileID: 4341739350101422830}
+  - component: {fileID: 3324467276646269047}
+  - component: {fileID: 8710828490057327043}
   m_Layer: 9
   m_Name: alien
   m_TagString: Enemy
@@ -610,8 +613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b9005ac0fb22d4882b5c1922285077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 10
-  speed: 10
+  acceleration: 2
+  speed: 8
   jumpForce: 20
 --- !u!114 &662647525611904966
 MonoBehaviour:
@@ -627,10 +630,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementScript: {fileID: 2869405394648941466}
   monsterTime: 2
-  chasePlayerChance: 0.25
-  rotateToPlayerSpeed: 10
-  minRandomRotation: -20
-  maxRandomRotation: 20
+  chasePlayerChance: 0.5
+  rotateToPlayerSpeed: 180
+  minRandomRotation: -1
+  maxRandomRotation: 1
+--- !u!114 &4341739350101422830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136796078738541680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8647a2c50af9242894247d5876a481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDamage: 10
+  maxDamage: 20
+  targetTag: Player
+--- !u!114 &3324467276646269047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136796078738541680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f01849d603958d419b5e1e16f3ff028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialLifeTotal: 100
+--- !u!114 &8710828490057327043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136796078738541680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae6dc99843bae744ac17029216f8516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 6082892962903856765}
 --- !u!1 &3752068322953223342
 GameObject:
   m_ObjectHideFlags: 0

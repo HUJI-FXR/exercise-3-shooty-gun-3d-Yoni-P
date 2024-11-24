@@ -924,7 +924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2464877722108654509, guid: ae8d244c1113b5b4292317918f779a43, type: 3}
   spawnPoint: {fileID: 1180237267527982778}
-  bulletSpeed: 10
+  bulletSpeed: 50
 --- !u!1 &5596058715973428255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1193,7 @@ GameObject:
   - component: {fileID: 5296726658810659224}
   - component: {fileID: 1113491598719566260}
   - component: {fileID: 7336146402633542632}
+  - component: {fileID: 7933274607228717203}
   m_Layer: 6
   m_Name: astronaut skinned
   m_TagString: Player
@@ -1308,6 +1309,19 @@ CapsuleCollider:
   m_Height: 2.04
   m_Direction: 1
   m_Center: {x: 0, y: 0.97, z: 0}
+--- !u!114 &7933274607228717203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088566707613034757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f01849d603958d419b5e1e16f3ff028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialLifeTotal: 100
 --- !u!1 &7199590325742487592
 GameObject:
   m_ObjectHideFlags: 0
