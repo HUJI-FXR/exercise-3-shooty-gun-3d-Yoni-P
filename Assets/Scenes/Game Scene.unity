@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3136796078738541680, guid: 0fe1d799a64fdae4b8ba588f20db0b1b, type: 3}
   groundCollider: {fileID: 716845669}
-  numEnemiesToSpawn: 50
+  numEnemiesToSpawn: 20
 --- !u!4 &105619255
 Transform:
   m_ObjectHideFlags: 0
