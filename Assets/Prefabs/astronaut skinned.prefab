@@ -813,6 +813,7 @@ GameObject:
   - component: {fileID: 4108168375850959471}
   - component: {fileID: 8335314406241982235}
   - component: {fileID: 7184978627236874653}
+  - component: {fileID: 2353433867754018104}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -925,6 +926,18 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2464877722108654509, guid: ae8d244c1113b5b4292317918f779a43, type: 3}
   spawnPoint: {fileID: 1180237267527982778}
   bulletSpeed: 50
+--- !u!114 &2353433867754018104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5588145495581359836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2327323f1e016a49b9a4993bac78f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5596058715973428255
 GameObject:
   m_ObjectHideFlags: 0

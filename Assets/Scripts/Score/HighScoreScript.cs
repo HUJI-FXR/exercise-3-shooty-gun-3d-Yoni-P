@@ -9,8 +9,10 @@ public class HighScoreScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI highScoreText;
     [SerializeField] private ScoreScript scoreScript;
     [SerializeField] private TextMeshProUGUI gameOverMessage;
+    [SerializeField] private MonsterSpawner monsterSpawner;
     
     private int _highScore = 0;
+    private int _numMonsters;
 
     public int HighScore => _highScore; 
 
@@ -20,9 +22,22 @@ public class HighScoreScript : MonoBehaviour
         {
             _highScore = PlayerPrefs.GetInt("HighScore");
         }
-        OnScoreChanged(_highScore);
+        highScoreText.text = "High Score: " + _highScore;
+        _numMonsters = monsterSpawner.NumMonstersSpawned;
+    }
+
+    private void OnEnable()
+    {
         scoreScript.ScoreChanged += OnScoreChanged;
         LifeTotalScript.PlayerDied += OnPlayerDied;
+        EnemiesTracker.AllEnemiesDead += OnAllEnemiesDead;
+    }
+
+    private void OnDisable()
+    {
+        scoreScript.ScoreChanged -= OnScoreChanged;
+        LifeTotalScript.PlayerDied -= OnPlayerDied;
+        EnemiesTracker.AllEnemiesDead -= OnAllEnemiesDead;
     }
 
     private void OnScoreChanged(int score)
@@ -32,9 +47,6 @@ public class HighScoreScript : MonoBehaviour
             _highScore = score;
         }
         highScoreText.text = "High Score: " + _highScore;
-
-        if (GameObject.FindGameObjectWithTag("Enemy") != null)
-            OnAllEnemiesDead();
     }
 
     private void OnAllEnemiesDead()

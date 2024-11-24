@@ -9,6 +9,7 @@ public class MonsterSpawner : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Collider groundCollider;
     [SerializeField] private int numEnemiesToSpawn;
+    public int NumMonstersSpawned => numEnemiesToSpawn;
 
     private void Start()
     {

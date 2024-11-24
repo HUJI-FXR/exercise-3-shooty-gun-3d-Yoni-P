@@ -514,6 +514,7 @@ GameObject:
   - component: {fileID: 4341739350101422830}
   - component: {fileID: 3324467276646269047}
   - component: {fileID: 8710828490057327043}
+  - component: {fileID: 1318473851521827039}
   m_Layer: 9
   m_Name: alien
   m_TagString: Enemy
@@ -675,6 +676,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 6082892962903856765}
+--- !u!114 &1318473851521827039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136796078738541680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee08094936696c44867ffb0da2449c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3752068322953223342
 GameObject:
   m_ObjectHideFlags: 0

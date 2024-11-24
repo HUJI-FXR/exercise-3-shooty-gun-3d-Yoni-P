@@ -32,7 +32,7 @@ public class LifeTotalScript : MonoBehaviour
                 _scoreScript.AddScore();
             else if (gameObject.CompareTag("Player"))
             {
-                PlayerDied.Invoke();
+                PlayerDied?.Invoke();
             }
             
             Destroy(gameObject);

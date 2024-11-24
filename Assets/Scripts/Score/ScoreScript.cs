@@ -24,6 +24,6 @@ public class ScoreScript : MonoBehaviour
     {
         _totalScore += 1 + (int)(comboBonus / comboTimer);
         comboTimer = 0f;
-        ScoreChanged.Invoke(_totalScore);
+        ScoreChanged?.Invoke(_totalScore);
     }
 }
