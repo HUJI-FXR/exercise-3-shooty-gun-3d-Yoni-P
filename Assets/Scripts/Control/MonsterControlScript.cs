@@ -36,6 +36,8 @@ public class MonsterControlScript : MonoBehaviour
     private void Update()
     {
         RandomizeMonsterStrategy();
+        RotateMonsterIfNecessary();
+        movementScript.MovePlayer(_monsterInput);
     }
 
     private void RandomizeMonsterStrategy()
@@ -49,13 +51,12 @@ public class MonsterControlScript : MonoBehaviour
         {
             _monsterTimer += Time.deltaTime;
         }
-
-        RotateMonsterIfNecessary();
-        movementScript.MovePlayer(_monsterInput);
     }
 
     private void RotateMonsterIfNecessary()
     {
+        if (_playerTransform == null) return;
+        
         var rot = 0f;
         if (_chasePlayer)
         {

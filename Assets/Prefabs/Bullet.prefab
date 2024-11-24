@@ -148,6 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8647a2c50af9242894247d5876a481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 10
-  maxDamage: 20
+  minDamage: 25
+  maxDamage: 50
   targetTag: Enemy
