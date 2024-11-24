@@ -65,8 +65,6 @@ public class MonsterControlScript : MonoBehaviour
             var angleDiff = Vector3.SignedAngle(dirToPlayer, monsterDir, Vector3.up);
 
             rot = Mathf.Abs(angleDiff) > 0.5f ? rotateToPlayerSpeed * -Mathf.Sign(angleDiff) * Time.deltaTime : 0f;
-            
-            Debug.Log("Angle diff: " + angleDiff + ", rot: " + rot);
         }
         else
         {
